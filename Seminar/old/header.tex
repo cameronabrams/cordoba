@@ -1,0 +1,161 @@
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{dsfont}
+\usepackage{accents}
+
+\usepackage{multirow}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usefonttheme[onlymath]{serif}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usetikzlibrary{snakes,arrows,mindmap,trees,backgrounds}
+\tikzset{graphics/.style={inner sep=0,outer sep=0}}
+\tikzset{scaleall/.style={scale=#1, transform shape}}
+\usepgflibrary{arrows}
+
+
+\newlength{\bbw}
+\newlength{\bbh}
+\newcommand{\pcuad}[3][]{
+  % First arguments is an optional prefix for the coordinate names
+
+  \setlength{\bbw}{#2}
+  \setlength{\bbh}{#3}
+  \useasboundingbox(0,0) rectangle (\bbw,\bbh);
+
+  \path(.5\bbw,.5\bbh) coordinate(#1cp);
+  \path(\bbw,0)        coordinate(#1se);
+  \path(0,0)           coordinate(#1sw);
+  \path(0,\bbh)        coordinate(#1nw);
+  \path(\bbw,\bbh)     coordinate(#1ne);
+ 
+  
+  \path(\bbw,.5\bbh) coordinate(#1ep);
+  \path(.5\bbw,0)    coordinate(#1sp);
+  \path(.5\bbw,\bbh) coordinate(#1np);
+  \path(0,.5\bbh)    coordinate(#1wp);
+       
+  \path(.75\bbw,.5\bbh) coordinate(#1hr);
+  \path(.25\bbw,.5\bbh) coordinate(#1hl);
+  \path(.5\bbw,.25\bbh) coordinate(#1vl);
+  \path(.5\bbw,.75\bbh) coordinate(#1vu);
+
+  \path(.75\bbw,.75\bbh) coordinate(#1c1);
+  \path(.25\bbw,.75\bbh) coordinate(#1c2);
+  \path(.25\bbw,.25\bbh) coordinate(#1c3);
+  \path(.75\bbw,.25\bbh) coordinate(#1c4);
+
+
+%  +-----------------------------------------------+
+%  |nw                    np                     ne|
+%  |                                               |
+%  |                                               |
+%  |          c2          vu          c1           |
+%  |                                               |
+%  |                                               |
+%  |wp        hl          cp          hr         ep|
+%  |                                               |
+%  |                                               |
+%  |          c3          vl          c4           |
+%  |                                               |
+%  |                                               |
+%  |sw                    sp                     se|
+%  +-----------------------------------------------+
+}
+ 
+        
+\newcommand{\showcuad}[1][]{
+
+   \draw[help lines,xstep=.5,ystep=.5,gray!10] (#1sw) grid (#1ne);
+   \draw[help lines,xstep=1,ystep=1,gray]      (#1sw) grid (#1ne);
+   %\draw[help lines,xstep=.25,ystep=.25,gray!20] (sw) grid (ne);
+   % \draw[help lines,xstep=1,ystep=1,gray] (sw) grid (ne);
+   % \foreach \x in {-20,-14.5,...,20} {
+   %     \node [anchor=north, gray,yshift=30] at (\x,0) {\tiny \bf \x};
+   %     \node [anchor=east,gray,xshift=30] at (0,\x) {\tiny \bf  \x};
+   % }
+               
+    \fill(#1se) circle(.1) node[anchor=south east]{#1se};
+    \fill(#1sw) circle(.1) node[anchor=south west]{#1sw};
+    \fill(#1ne) circle(.1) node[anchor=north east]{#1ne};
+    \fill(#1nw) circle(.1) node[anchor=north west]{#1nw};
+                  
+    \fill(#1hr) circle(.1) node[above]{#1hr};
+    \fill(#1hl) circle(.1) node[above]{#1hl};
+    \fill(#1vu) circle(.1) node[above]{#1vu};
+    \fill(#1vl) circle(.1) node[above]{#1vl};
+                  
+    \fill(#1sp) circle(.1) node[anchor=south]{#1sp};
+    \fill(#1wp) circle(.1) node[anchor=west] {#1wp};
+    \fill(#1np) circle(.1) node[anchor=north]{#1np};
+    \fill(#1ep) circle(.1) node[anchor=east] {#1ep};
+
+    \fill(#1cp) circle(.1) node[above]{#1cp};
+    \fill(#1c1) circle(.1) node[above]{#1c1};
+    \fill(#1c2) circle(.1) node[above]{#1c2};
+    \fill(#1c3) circle(.1) node[above]{#1c3}; 
+    \fill(#1c4) circle(.1) node[above]{#1c4};
+
+    %\fill[red](cp|-c1) circle(.1) node[anchor=north]{cp|-c1};
+
+}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\dsum}{\displaystyle \sum}
+\newcommand{\uu}[1]{{\boldsymbol #1}}
+\newcommand{\ud}{\,\mathrm{d}}
+\def\ttau{\uu{\tau}}
+\def\bb{\uu{b}}
+\def\nb{\uu{n}}
+\def\pb{\uu{p}}
+\def\wb{\uu{w}}
+\def\xb{\uu{x}}
+\def\ab{\uu{a}}
+\def\yb{\uu{y}}
+\def\vb{\uu{v}}
+\def\fb{\uu{f}}
+\def\zb{\uu{z}}
+\def\Xb{\uu{X}}
+\def\etab{\uu{\eta}}
+\def\thetab{\uu{\theta}}
+\def\lambdab{\uu{\lambda}}
+\def\gammab{\uu{\gamma}}
+\def\taub{\uu{\tau}}
+\def\varphib{\uu{\varphi}}
+\def\Ab{\uu{A}}
+\def\Bb{\uu{B}}
+\def\Gb{\uu{G}}
+\def\Fb{\uu{F}}
+\def\Jb{\uu{J}}
+\def\Rb{\uu{R}}
+\def\Tb{\uu{T}}
+\def\rb{\uu{r}}
+\def\ab{\uu{a}}
+\newcommand{\molar}[1]{\underaccent{\bar}{#1}}
+\def\um{\molar{U}}
+\def\hm{\molar{H}}
+\def\sm{\molar{S}}
+\def\am{\molar{A}}
+\def\gm{\molar{G}}
+\def\hh{\hat{H}}
+\def\sh{\hat{S}}
+\def\vm{\molar{V}}
+\def\cp{C_{\rm P}}
+\def\cv{C_{\rm V}}
+\def\cps{C_{\rm P}^*}
+\def\cvs{C_{\rm V}^*}
+\def\wsd{\dot{W}_s}
+\def\md{\dot{M}}\newcommand{\pd}[2]{\left(\frac{\partial {#1}}{\partial 
+{#2}}\right)}
+\newcommand{\tpd}[3]{\left(\frac{\partial {#1}}{\partial {#2}}\right)_{#3}}
+\newcommand{\tpdn}[4]{\left(\frac{\partial^{#4} {#1}}{\partial 
+{#2}^{#4}}\right)_{#3}}
+

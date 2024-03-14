@@ -1,0 +1,10 @@
+\frametitle{Three-Dimensional Free-Energy $F(\zb )$ for O$_{\sf 2}$ in MSOX}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.75,0.15) node(cites)[anchor=north west,text
+width=\textwidth]{{\tiny \textcolor{red!80!black}{
+A. Bucci and \underline{CFA}, {\it J Chem Theory Comput} {\bf 10}:2668 (2014)
+}}};
+\path(nw) +(-1,-1) node (image1) [graphics,anchor=north west] {\includegraphics[width=1.2\textwidth]{msox_fep_sites.png}};
+\end{tikzpicture}

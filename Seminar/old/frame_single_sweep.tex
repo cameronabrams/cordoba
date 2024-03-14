@@ -1,0 +1,25 @@
+\begin{frame}[fragile]{Single-Sweep Free-Energy Reconstruction}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.75,0.15) node(cites)[anchor=north west,text 
+width=\textwidth]{{\tiny \textcolor{red!80!black}{
+L. Maragliano and E. Vanden-Eijnden, {\it J Chem Phys} {\bf 88}:184110 (2008)
+}}};
+\path(nw) +(0.0,-1.0) node(text1) [anchor=north west,text width=\textwidth] {
+At each $\zb_i$, use \textcolor{green!80!black}{restrained MD} to estimate mean forces $\fb_i$:
+\begin{displaymath}
+\fb_i = -\left.\frac{\partial F}{\partial \zb}\right|_{\zb_i} \approx \langle \kappa\left[\thetab(\xb)-\zb\right]\rangle_{\zb_i}.
+\end{displaymath}
+Cast free energy $F(\zb)$ as a superposition of radial Gaussian basis functions $\phi_i$:
+\begin{displaymath}
+\tilde{F}(\zb) = \sum_i a_i \phi_i (|\zb-\zb_i|;\sigma)
+\end{displaymath}
+Determine $\tilde{F}$ by finding $\ab,\sigma$ to minimize an error $E(\ab,\sigma)$:
+\begin{displaymath}
+E(\ab,\sigma) = \sum_i\left|\sum_{i^\prime} a_{i^\prime} \nabla_{\zb}\phi(|\zb_i-\zb_{i^\prime}|;\sigma)+\fb_i\right|^2
+\end{displaymath}
+};
+\end{tikzpicture}
+\end{frame}
+

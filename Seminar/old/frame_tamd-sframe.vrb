@@ -1,0 +1,24 @@
+\frametitle{Temperature-Accelerated MD}
+\vspace{-5mm}
+\textcolor{blue}{\tiny Maragliano and Vanden-Eijnden, {\it Chem Phys Lett} {\bf
+426}:168 (2006)}
+
+Extended potential energy:\ \ $\displaystyle U(\xb,\zb) = V(\xb) +
+\frac{1}{2}\kappa\sum_{j=1}^{M}[\theta_j(\xb)-z_j]^2]$\\
+Dynamics of configurational variables $\xb$ (``restrained MD''):
+\begin{displaymath}
+m_i\ddot{x}_i = -\frac{\partial V(\xb)}{\partial
+x_i}-\kappa\sum_{j=1}^{M}\left[\theta_j(\xb)-z_j\right]\frac{\partial\theta_j}{
+\partial x_i}+\mbox{thermostat @ $\beta$}
+\end{displaymath}
+Dynamics of auxiliary variables $\zb$ with enforced separation of time-scales:
+\begin{displaymath}
+\bar\gamma\bar{m}_j\dot{z}_j = \kappa\left[\theta_j(\xb)-z_j\right] +
+(\mbox{noise @ $\bar\beta$}) \approx -\frac{\partial F_{\kappa}}{\partial z_j} +
+\mbox{noise}
+\end{displaymath}
+
+$\zb$ responds to free energy like $\xb$ responds to potential energy.\\
+Taking $\bar\beta < \beta$ ($\bar{T} > T$)\ $\Rightarrow$\ enhanced sampling in
+a chosen CV-space.
+
