@@ -1,9 +1,0 @@
-\frametitle{Molecular Dynamics Simulations: Small Length and Time Scales}
-\begin{tikzpicture}[scale=1.5]
-\node[anchor=south west,inner sep=0] (image) at (-0.1,0)
-{\includegraphics[width=0.985\textwidth]{time_vs_length.eps}};
-\begin{scope}[x={(image.south east)},y={(image.north west)}]
-\draw[red,thick,rounded corners] (0.2,0.125) rectangle (0.32,0.375);
-\draw[red,thick] (0.26,0.275) node {MD};
-\end{scope}
-\end{tikzpicture}

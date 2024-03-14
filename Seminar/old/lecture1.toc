@@ -1,2 +1,0 @@
-\beamer@sectionintoc {1}{Introduction and Motivation}{3}{0}{1}
-\beamer@sectionintoc {2}{Summary}{6}{0}{2}
