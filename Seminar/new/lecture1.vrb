@@ -1,0 +1,36 @@
+\frametitle{Acknowledgments}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.5,0.0) node(text1) [anchor=north west,text width=1.1\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
+\begin{itemize}
+\item {\bf OTFP/TAMD:}  \textcolor{red}{Prof. S. Alexis PAZ} (N. U. C\'ordoba, Argentina)
+\item {\bf Milestoning:}  \textcolor{blue}{Dr. Anthony BUCCI} (West Pharma)
+\item {\bf Climbing String:} \textcolor{blue}{Dr. Gourav SHRIVASTAV} ()
+\item {\bf Other projects:}
+\begin{itemize}
+\item Steven GOSSERT (2021):  HIV-1 Entry Inhibitor Design
+\item Natasha VERGARA (2022):  HIV-1 Entry Inhibitor Design
+\item Ming HUANG (2023):  Molecular modeling of thermosets
+\item Dr. Salman ZARRINI:  Molecular modeling of thermoset/glass sizing fluid
+\item Dr. Mohammadjavad MOHAMMADI:  HIV-1 Entry Inhibitor Design
+\end{itemize}
+\item {\bf Collaborators}
+\begin{itemize}
+\item \textcolor{green!80!black}{Prof. Eric VANDEN-EIJNDEN} (NYU; Mathematics)
+\item Prof. Irwin CHAIKEN (DUCOM; Biochemistry)
+\item Prof. Amos SMITH III (UPenn; Organic Chemistry)
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item {\bf Funding (this talk):} NIH R01GM100472, NSF DMR1207389
+\item {\bf Resources:} {\tt www.github.com/cameronabrams/cfacv}, {\tt www.github.com/cameronabrams/pestifer}
+\end{itemize}
+};
+
+%++(0.0,-1.25) node(text2) [anchor=north west,text width=1.1\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
+%\small \textcolor{blue}{\em Collaborators:}  {\bf Tang-Qing YU} $\bullet$ {\bf Eric VANDEN-EIJNDEN (NYU)}
+%$\bullet$ Irwin CHAIKEN (DUCOM) $\bullet$ Amos SMITH III (UPenn Chem)}
+%++(0.0,-1) node(text2) [anchor=north west,text width=\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
+%\textcolor{green!80!black}{Funding (this talk):} NIH R01GM100472, NSF DMR1207389\\   \textcolor{red}{Computing:}  XSEDE, Drexel Proteus};
+\end{tikzpicture}

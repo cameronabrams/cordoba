@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2023.6.13)  14 MAR 2024 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2023.6.13)  14 MAR 2024 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1225,61 +1225,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
-] (./frame_motiv1.tex
-\openout4 = `lecture1.vrb'.
-
-
-(./lecture1.vrb
-Package epstopdf Info: Source file: <time_vs_length.eps>
-(epstopdf)                    date: 2024-03-14 15:58:55
-(epstopdf)                    size: 34969 bytes
-(epstopdf)             Output file: <time_vs_length-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-03-14 15:58:55
-(epstopdf)                    size: 17797 bytes
-(epstopdf)             Command: <repstopdf --outfile=time_vs_length-eps-convert
-ed-to.pdf time_vs_length.eps>
-(epstopdf)             \includegraphics on input line 4.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./time_vs_length-eps-converted-to.pdf): PDF incl
-usion: found PDF version <1.7>, but at most version <1.5> allowed
-<time_vs_length-eps-converted-to.pdf, id=48, 722.7pt x 505.89pt>
-File: time_vs_length-eps-converted-to.pdf Graphic file (type pdf)
-<use time_vs_length-eps-converted-to.pdf>
-Package pdftex.def Info: time_vs_length-eps-converted-to.pdf  used on input lin
-e 4.
-(pdftex.def)             Requested size: 299.6095pt x 209.72429pt.
-) [4
-
- <./time_vs_length-eps-converted-to.pdf>]) (./frame_essential_problem.tex
-Package epstopdf Info: Source file: <hmmd-graphic.eps>
-(epstopdf)                    date: 2024-03-14 15:58:55
-(epstopdf)                    size: 14198 bytes
-(epstopdf)             Output file: <hmmd-graphic-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-03-14 15:58:55
-(epstopdf)                    size: 10171 bytes
-(epstopdf)             Command: <repstopdf --outfile=hmmd-graphic-eps-converted
--to.pdf hmmd-graphic.eps>
-(epstopdf)             \includegraphics on input line 13.
-Package epstopdf Info: Output file is already uptodate.
-
-
-pdfTeX warning: pdflatex (file ./hmmd-graphic-eps-converted-to.pdf): PDF inclus
-ion: found PDF version <1.7>, but at most version <1.5> allowed
-<hmmd-graphic-eps-converted-to.pdf, id=63, 318.18875pt x 627.34375pt>
-File: hmmd-graphic-eps-converted-to.pdf Graphic file (type pdf)
-<use hmmd-graphic-eps-converted-to.pdf>
-Package pdftex.def Info: hmmd-graphic-eps-converted-to.pdf  used on input line 
-13.
-(pdftex.def)             Requested size: 107.55333pt x 212.04962pt.
-
-Overfull \vbox (31.78883pt too high) detected at line 13
- []
-
-[5
-
- <./hmmd-graphic-eps-converted-to.pdf>]) [6
+] [4
 
 ]
 \openout4 = `lecture1.vrb'.
@@ -1290,7 +1236,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmss on input line
 
 (/usr/share/texmf/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) [7
+)) [5
 
 ] (./frame_ack.tex
 \openout4 = `lecture1.vrb'.
@@ -1300,7 +1246,7 @@ File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 Overfull \vbox (31.78883pt too high) detected at line 37
  []
 
-[8
+[6
 
 ])
 \tf@nav=\write6
@@ -1317,30 +1263,24 @@ Package rerunfilecheck Info: File `lecture1.out' has not changed.
 (rerunfilecheck)             Checksum: FCA8EEB4C244C2321C5C41A2DB4A9027;262.
  ) 
 Here is how much of TeX's memory you used:
- 35737 strings out of 479515
- 839304 string characters out of 5877294
- 1236932 words of memory out of 5000000
- 52296 multiletter control sequences out of 15000+600000
- 411744 words of font info for 57 fonts, out of 8000000 for 9000
+ 35600 strings out of 479515
+ 836258 string characters out of 5877294
+ 1235932 words of memory out of 5000000
+ 52183 multiletter control sequences out of 15000+600000
+ 408987 words of font info for 48 fonts, out of 8000000 for 9000
  891 hyphenation exceptions out of 8191
  131i,13n,132p,1842b,1014s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf
-/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi5.
-pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texm
-f/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/tex
-mf/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf/fonts/type1/publi
-c/amsfonts/cm/cmss9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmssbx
-10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texmf/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfss0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1
-000.pfb>
-Output written on lecture1.pdf (8 pages, 270898 bytes).
+/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/a
+msfonts/cm/cmss10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmss8.pf
+b></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texmf/
+fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0900
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb>
+Output written on lecture1.pdf (6 pages, 182854 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
