@@ -1,0 +1,38 @@
+% Author: Cameron F. Abrams, <cfa22@drexel.edu>
+% March 15, 2024
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=1cm, minimum height=0.5cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1cm, minimum height=0.5cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=green!30, aspect=2]
+\tikzstyle{myarrow} = [thick,->,>=stealth]
+
+\begin{frame}[fragile]{Molecular Dynamics (MD)}
+\begin{tikzpicture}[scaleall=1.0,node distance=1.75cm]
+\node (start) [startstop,xshift=-3cm] {Start};
+\node (init) [io,right of=start,xshift=1cm,text width=2.75cm] {Set atom initial positions $\xb(0)$ and velocities $\vb(0)$};
+\node (force) [process,right of=init,xshift=3cm, text width=4.25cm] {\begin{tabular}{c}Calculate forces\\from potential\\$\fb(t)=-\nabla V(\xb)$\end{tabular}};
+\node (integrate) [process,below of=force,text width=4.25cm,yshift=-1cm] {\begin{tabular}{c} Update state \\ $\xb(t) \gets \xb(t) + \vb(t)\Delta t$ \\ $\vb(t) \gets \vb(t) + \frac{1}{\mb}\fb(t) \Delta t$\end{tabular}};
+\node (samplecheck) [decision,below of=init,yshift=-1cm] {Sample?};
+\node (sample) [io,below of=samplecheck] {Save sample $\xb(t_i)$ @ $t_i$ };
+\node (check) [decision,below of=sample] {Done?};
+\node (continue) [process,right of=check,xshift=3cm] {\begin{tabular}{c} Update time \\ $t \gets t + \Delta t$ \\ ($\Delta t$ $\approx$ 10$^{-15}$ s) \end{tabular}};
+\node (terminate) [startstop,left of=check,xshift=-1cm] {Stop};
+\draw [myarrow] (start) -- (init);
+\draw [myarrow] (init) -- (force);
+\draw [myarrow] (force) -- (integrate);
+\draw [myarrow] (integrate) -- (samplecheck);
+\draw [myarrow] (samplecheck) --  node[anchor=west] {yes} (sample);
+\draw [myarrow] (samplecheck) --
+                ($ (samplecheck) - (27mm,0) $) -- 
+                node[anchor=east] {no}
+                ($ (sample.south)!0.5!(check.north) - (27mm,0) $) --
+                ($ (sample.south)!0.5!(check.north) $);
+\draw [myarrow] (sample) -- (check);
+\draw [myarrow] (check) -- node[anchor=south] {no} (continue);
+\draw [myarrow] (continue.east) -- 
+                ($ (continue.center) + (30mm,0) $) -- 
+                ($ (force.center) + (30mm,0) $) -- 
+                (force.east);
+\draw [myarrow] (check) -- node[anchor=south] {yes} (terminate);
+\end{tikzpicture}
+\end{frame}

@@ -1,0 +1,27 @@
+\begin{frame}[fragile]{MD and Ergodicity}
+
+\textcolor{green!80!black}{Statistical mechanics:}
+$$
+P_\nu = \left\{\begin{array}{l}
+    \mbox{Probability of state $\nu \equiv (\xb,\vb)$}\\
+    \mbox{out of \textcolor{blue!80!white}{ensemble} of states}\\
+    \mbox{at equilibrium}\\
+        \end{array}\right\}
+$$
+
+Observables as \textcolor{blue!80!white}{ensemble averages}:
+$$
+\langle G \rangle = \sum_\nu P_\nu G_\nu
+$$
+
+\textcolor{green!80!black}{Ergodic hypothesis: Infer $P_\nu$ via uniform random sampling}
+$$
+\langle G \rangle = \lim_{t\rightarrow\infty} \frac{1}{N}\sum_{i}^{N}G(\nu_{\rm MD}(t_i))
+$$ 
+
+\begin{center}
+\fbox{\textcolor{red!80!black}{Ergodicity in MD is (usually) unattainable!}}
+\end{center}
+
+\end{frame}
+

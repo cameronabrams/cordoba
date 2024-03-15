@@ -6,6 +6,7 @@
 \usepackage{multirow}
 
 \usetheme[progressbar=frametitle]{metropolis}
+\setbeamercolor{background canvas}{bg=white}
 % \usetheme{focus}
 \usepackage{appendixnumberbeamer}
 \usefonttheme[onlymath]{serif}
@@ -17,7 +18,7 @@
 
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
-\usetikzlibrary{snakes,arrows,mindmap,trees,backgrounds}
+\usetikzlibrary{snakes,arrows,mindmap,trees,backgrounds,shapes.geometric,calc}
 \tikzset{graphics/.style={inner sep=0,outer sep=0}}
 \tikzset{scaleall/.style={scale=#1, transform shape}}
 \usepgflibrary{arrows}
@@ -120,6 +121,7 @@
 \def\wb{\uu{w}}
 \def\xb{\uu{x}}
 \def\ab{\uu{a}}
+\def\mb{\uu{m}}
 \def\yb{\uu{y}}
 \def\vb{\uu{v}}
 \def\fb{\uu{f}}
