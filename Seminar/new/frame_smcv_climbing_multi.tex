@@ -1,0 +1,26 @@
+\begin{frame}{Climbing Multistrings}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+\path(nw) 
+    ++(0,0) node(header)[anchor=north west]{
+        \nohyphens{Systematically search out \textcolor{red!80!black}{all} saddles connected to a minimum}
+    }
+    ++(0,-0.6) node(graphic1)[anchor=north west]{
+        \animategraphics[loop,controls,width=0.5\textwidth]{10}{movie1/cms1-}{0}{36}
+    }
+    ++(0.5\textwidth,0) node(graphic2)[anchor=north west]{
+        \animategraphics[loop,controls,width=0.5\textwidth]{10}{movie2/cms2-}{0}{68}
+    };
+\path(graphic1.south west)
+    ++(0,-0.6) node(label1)[anchor=west]{
+        Simultaneous independent climbers
+    };
+\path(graphic2.south west)
+    ++(0,-0.6) node(label2)[anchor=west]{
+        Simultaneous \textcolor{red!80!black}{interacting} climbers
+    };
+\path(se)
+    ++(0,0.5) node(att)[anchor=east]{
+        {\tiny \textcolor{blue!80!black}{G. Shrivastav and CFA, {\it J Chem Phys} 2019 {\bf 151}:124112}}
+    };\end{tikzpicture}
+\end{frame}
