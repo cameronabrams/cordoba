@@ -1,0 +1,22 @@
+\begin{frame}[fragile]{The Ergodic Hypothesis}
+
+Configurations $\xb \equiv (x_1, y_1, z_1, \dots, x_N, y_N, z_N)$ are \textcolor{red!80!black}{Boltzmann-weighted}:
+\begin{displaymath}
+\rho(\xb) = \frac{1}{\mathcal{Z}}e^{-\beta V(\xb)}\ \ \mbox{where}\ \ 
+\mathcal{Z}  = \int_\Omega d\xb\ e^{-\beta V(\xb)}
+\end{displaymath}
+
+\textcolor{blue}{Ergodicity}:  A(n infinitely) long trajectory $\xb(t)$ \textcolor{green!80!black}{reveals} $\rho(\xb)$.
+\begin{displaymath}
+\langle X \rangle = \lim_{n_T\rightarrow\infty}\frac{1}{n_T}\sum_{i=1}^{n_T} 
+X[\xb(t_i)] = \int d\xb\ X(\xb)\ \rho(\xb)
+\end{displaymath}
+
+\textcolor{green!80!black}{Molecular Dynamics} generates {\em finite} trajectories given
+\begin{itemize}
+\item \textcolor{red}{initial conditions}\ $\xb(0)$ and $\dot{\xb}(0)$;
+\item \textcolor{green!80!black}{Potential-energy function (all interatomic interactions)}\ $V(\xb)$; and
+\item \textcolor{blue}{an equation of motion encoded in a suitable numerical integrator}\\ $\xb(t+\Delta t) \gets \xb(t) + \fb_V(\xb,\dot{\xb},\Delta t)$
+\end{itemize}
+\end{frame}
+

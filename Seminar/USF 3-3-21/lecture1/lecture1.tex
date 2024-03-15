@@ -1,0 +1,103 @@
+\documentclass[10pt]{beamer}
+\input{header}
+
+\title{Recent simulation methods for resolving molecular details in thermodynamics and kinetics}
+\date{March 3, 2021}
+\author{Cameron F. Abrams}
+\institute{Drexel University, Department of Chemical and Biological Engineering}
+\titlegraphic{\hfill\includegraphics[height=0.75cm]{drexel-horz-blue.png}}
+
+\begin{document}
+
+\maketitle
+
+\input{frame_keyfacts}
+
+\input{frame_faculty}
+
+\section{Introduction and Motivation:  Making MD Do More}
+
+\input{frame_motiv1}
+
+\input{frame_essential_problem}
+
+\input{frame_hmmd}
+
+\section{Temperature-Accelerated MD: Enhanced Feature Sampling}
+
+\input{frame_tamd}
+
+\input{frame_gp120_tamd}
+
+\section{On-the-Fly Parameterization:  Free-Energy Calculations}
+
+\input{frame_otfp}
+
+\input{frame_davei}
+
+\input{frame_davei_otfp_results}
+
+\input{frame_kchan}
+
+\input{frame_kchan_2dotfp}
+
+\input{frame_kchan_waterworks}
+
+%\input{frame_kchan_mfeps}
+
+\section{The String Method in Collective Variables: Reversible Pathways}
+
+\input{frame_smcv}
+
+\input{frame_smcv_climbing}
+
+\input{frame_smcv_climbing_multi}
+
+\input{frame_smcv_ala2_network}
+
+\input{frame_smcv_ala3_network}
+
+\section{Markovian Milestoning:  Kinetics}
+
+\input{frame_milestoning}
+
+\input{frame_building_markovian_milestoning1}
+
+%\input{frame_single_sweep}
+
+\input{frame_markmilevoro}
+
+\input{frame_msox_intro}
+
+%\input{frame_msox_femap}
+
+\input{frame_msox_hitting_points}
+
+%\input{frame_milestoning_predicts_o2_kinetics}
+
+\input{frame_msox_mfpt_pathways}
+
+%\input{frame_msox_indep_o2_slowdown}
+
+\section{Summary}
+
+\begin{frame}[fragile]{Summary}
+\begin{itemize}
+\item \textcolor{red}{OTFP} combines enhanced sampling and free-energy-profile generation to provide deeper understanding of biomolecular mechanisms
+\begin{itemize}
+\item We rationalized DAVEI activity dependence on linker length
+\item We recapitulate water-mediated ``knock-on'' transport of multiple K$^+$ ions in Kv1.2, but also predict reduced barriers for dry transport
+\end{itemize}
+\item Demonstrated the \textcolor{magenta!80!black}{Climbing Multistrings Method} for locating stationary points in feature space
+\item Demonstrated \textcolor{green!80!black}{Markovian milestoning} along minimum free-energy pathways to estimate entry and exit rates of O$_{\sf 2}$ in MSOX
+\begin{itemize}
+\item MSOX: Simulations agree with experiment that modified ping-pong mechanism is more likely than ping-pong because substrate influences O$_{\sf 2}$
+entry and exit kinetics
+%\item MSOX: Substrate-induced gatekeeper closing and active-site desolvation likely underly the substrates effect on O$_{\sf 2}$.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\input{frame_ack}
+
+\end{document}
