@@ -1,0 +1,59 @@
+\begin{frame}[fragile]{Milestoning Predicts O$_{\sf 2}$ Kinetics Are Sensitive to Substrate}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.75,0.15) node(text)[anchor=north west,text 
+width=\textwidth]{{\tiny \textcolor{red!80!black}{
+A. Bucci, T.-Q. Yu, E. Vanden-Eijnden and \underline{CFA} {\it J Chem Theory Comput} {\bf 12}:2964 (2016).}}};
+\path(nw) ++(-0.25,0.5) node(table)
+[shape=rectangle,anchor=north west,text width=\textwidth] {
+  \begin{table}
+%    \caption{Largest cities in the world (source: Wikipedia)}
+    \begin{tabular}{llcccc}
+      \toprule
+       & & $k_1$ & $k_{\sf O_2}$  & $k_{-1}$ & $K_{\rm D}\equiv k_{-1}/k_1$ \\
+       & & (M$^{-1}$s$^{-1}$) & (M$^{-1}$s$^{-1}$) & (s$^{-1}$)& (M)\\
+      \midrule
+      \multirow{2}{*}{Milestoning} & apo & 7.23$\times$10$^{6}$ & --- & 5$\times$10$^7$ & 7.1 \\
+      & holo & 2.74$\times$10$^{6}$ & --- & 6$\times$10$^6$ & 2.2 \\
+      Experiment* & & --- & 2.8$\times$10$^5$ & --- & ---\\
+      \bottomrule
+    \end{tabular}
+    \raggedright{\Tiny *\textcolor{blue!80!white}{MA Wagner and MS Jorns 
+    {\it Biochemistry} {\bf 39}:8825 (2000).}}
+  \end{table}
+  $\Rightarrow$ Presence of substrate influences O$_{\sf 2}$ entry/exit kinetics.
+};
+%\path(sw) ++(0,4.0) node(sometext) [anchor=west,shape=rectangle,draw]{
+%\begin{align*}
+%   (K_D)_{\sf apo} > (K_D)_{\sf holo}  \Rightarrow & 
+%   \mbox{presence of substrate \textcolor{green!80!black}{\bf does} influence}\\
+% & \mbox{O$_{\sf 2}$ entry/exit kinetics.}\\
+% \Rightarrow & \mbox{Support for \textcolor{red}{modified ping-pong}.}
+%\end{align*}
+%};
+
+\path(sw) ++(0,2.4) node (ErO2) [anchor=west,shape=rectangle] {E$_{\sf R}$ + O$_{\sf 2}$}
+          ++(3,0) node (ErsO2) [anchor=west,shape=rectangle] {E$_{\sf R}$*O$_{\sf 2}$}
+          ++(3,0) node (Eox) [anchor=west,shape=rectangle] {E$_{\sf O}$};
+\path(ErO2) ++(0,1) node (phant1) [anchor=south] {};
+\path(Eox) ++(0,1) node (phant2) [anchor=south] {};
+%\pgfsetarrowsend{left to}
+\draw [white] (ErO2.south east) -- (ErO2.north east) node(labelp1)[pos=0.45]{} node(labelp2)[pos=0.55]{};
+\draw [white] (ErsO2.south west) -- (ErsO2.north west) node(labelp3)[pos=0.45]{} node(labelp4)[pos=0.55]{};
+\draw [-left to,thick,red] (labelp2) -- (labelp4) node(labelk1)[pos=0.50]{};
+\draw [-left to,thick,red] (labelp3) -- (labelp1) node(labelkm1)[pos=0.50]{};
+\draw [->,thick,black] (ErsO2.east) -- (Eox.west) node(labelkox)[pos=0.50]{};
+\draw [->,thick,green!80!black] (ErO2.north) .. controls (phant1.south) and (phant2.south) .. (Eox.north) node(labelko2)[pos=0.50]{};
+\path(labelk1) ++(0,0.22) node (k1) {$k_1$};
+\path(labelkm1) ++(0,-0.22) node (kminus1) [shape=rectangle] {$k_{-1}$};
+\path(labelkox) ++(0,0.22) node (kox) [shape=rectangle] {$k_{\sf ox}$};
+\path(labelko2) ++(0,0.22) node (ko2) [shape=rectangle] {$k_{\sf O_2}$};
+\path(ko2) ++(0.75,0) node (textko2) [anchor=west,shape=rectangle] {\small Expt. measures this};
+\path(kminus1) ++(0,-1) node (textkm1) [anchor=north,shape=rectangle] {\small Milestoning measures these.};
+\draw [->,black,thick] (textko2.west) -- (ko2.east);
+\draw [->,black,thick] (textkm1.north) -- (kminus1.south);
+\path(Eox) ++(1.5,1) node (textrates) [shape=rectangle,anchor=west] {$\ds k_{\sf O_2} = \frac{k_{\sf ox}}{K_{\rm D}}$}
+           ++(-0.5,-0.5) node (labeltext) [shape=rectangle,anchor=north west,text width=0.4\textwidth] {$K_{\rm D}$ may explain observed MPP, {\bf if} $k_{\rm ox}$ is independent of substrate.};
+\end{tikzpicture}
+\end{frame}

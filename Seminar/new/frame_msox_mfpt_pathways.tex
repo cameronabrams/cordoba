@@ -1,0 +1,46 @@
+\begin{frame}[fragile]{Mean First-Passage Times along Diffusion Pathways}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.75,0.15) node(text)[anchor=north west,text 
+width=\textwidth]{{\tiny \textcolor{red!80!black}{
+A. Bucci, T.-Q. Yu, E. Vanden-Eijnden and \underline{CFA} {\it J Chem Theory Comput} {\bf 12}:2964 (2016).}}};
+\path(c2) ++(0,-1) node(aas)[shape=rectangle] {Active} 
+          ++(0,2.0) node(aMidLys) [shape=rectangle] {Mid-Lys}
+          ++(-2.4,-2.0) node(aGateLys) [shape=rectangle] {Gate-Lys}
+          ++(4.6,0) node(aSarc) [shape=rectangle] {Sarc}
+          ++(-3.5,1.5) node(ApoLabel) [shape=rectangle,draw,thick,anchor=south] {{\it Apo}}
+          ++(0,-2.5) node(conclabel) [shape=rectangle,draw,blue!80!black,anchor=north west] {\textcolor{blue}{[O$_{\sf 2}$] = 0.26 mM}};
+\path(c3) ++(0,0) node(has)[shape=rectangle] {Active} 
+          ++(-2.4,0) node(hGateLys) [shape=rectangle] {Gate-Lys}
+          ++(4.6,0) node(hSarc) [shape=rectangle] {Sarc}
+          ++(-3.5,1) node(HoloLable) [shape=rectangle,draw,thick,anchor=south] {{\it Holo}};
+\draw[thick,red,transform canvas={yshift=-0.3ex},-right to] (aGateLys) -- node[below]{700\ $\mu$s} (aas);
+\draw[thick,green!80!black,transform canvas={yshift=0.3ex},-right to] (aas) -- node[above]{0.1\ $\mu$s} (aGateLys);
+\draw[thick,green!80!black,transform canvas={yshift=0.3ex},-left to] (aas) -- node[above]{0.1\ $\mu$s} (aSarc);
+\draw[thick,red,transform canvas={yshift=-0.3ex},-left to] (aSarc) -- node[below]{900\ $\mu$s} (aas);
+
+\draw[thick,red,transform canvas={xshift=-0.3ex},-right to] (aMidLys) -- node[left]{200\ $\mu$s} (aas);
+\draw[thick,green!80!black,transform canvas={xshift=0.3ex},-right to] (aas) -- node[right]{0.03\ $\mu$s} (aMidLys);
+
+\draw[thick,red,transform canvas={yshift=-0.3ex},-right to] (hGateLys) -- node[below]{7000\ $\mu$s} (has);
+\draw[thick,green!80!black,transform canvas={yshift=0.3ex},-right to] (has) -- node[above]{3\ $\mu$s} (hGateLys);
+\draw[thick,green!80!black,transform canvas={yshift=0.3ex},-left to] (has) -- node[above]{0.2\ $\mu$s} (hSarc);
+\draw[thick,red,transform canvas={yshift=-0.3ex},-left to] (hSarc) -- node[below]{500\ $\mu$s} (has);
+\path(np) ++(0,-2.5) node(bigtext) [shape=rectangle,anchor=north west,text width=0.5\textwidth] {
+Substrate binding:
+\begin{itemize}
+\item effectively shuts down entry through all pathways {\em except} one (``Sarc'').
+\item slows exit through all pathways.
+\end{itemize}};
+
+%\draw [white] (aas.south west) -- (aas.north west) node(aasll) [pos=0.45]{} node(aasul) [pos=0.55]{};
+%\draw [white] (aas.south east) -- (aas.north east) node(aaslr) [pos=0.45]{} node(aasur) [pos=0.55]{};
+%\draw [white] (aGateLys.south east) -- (aGateLys.north east) node(agllr) [pos=0.45]{} node(aglur) [pos=0.55]{};
+%\draw [white] (aSarc.south west) -- (aSarc.north west) node(asll) [pos=0.45]{} node(asul) [pos=0.55]{};
+%\draw [-left to,thick,red] (aglur) -- (aasul);
+%\draw [-left to,thick,red] (aasll) -- (agllr);
+%\draw [-left to,thick,red] (aasur) -- (asul);
+%\draw [-left to,thick,red] (asll) -- (aaslr);
+\end{tikzpicture}
+\end{frame}
