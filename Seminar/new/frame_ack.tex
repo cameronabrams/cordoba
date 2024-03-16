@@ -1,38 +1,55 @@
-\begin{frame}[fragile]{Acknowledgments}
-\begin{tikzpicture}[scaleall=1.0]
-\pcuad{\textwidth}{\textheight}
-%\showcuad
-\path(nw) ++(-0.5,0.0) node(text1) [anchor=north west,text width=1.1\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
-\begin{itemize}
-\item {\bf OTFP/TAMD:}  \textcolor{red}{Prof. S. Alexis PAZ} (N. U. C\'ordoba, Argentina)
-\item {\bf Milestoning:}  \textcolor{blue}{Dr. Anthony BUCCI} (West Pharma)
-\item {\bf Climbing String:} \textcolor{blue}{Dr. Gourav SHRIVASTAV} ()
-\item {\bf Other projects:}
-\begin{itemize}
-\item Steven GOSSERT (2021):  HIV-1 Entry Inhibitor Design
-\item Natasha VERGARA (2022):  HIV-1 Entry Inhibitor Design
-\item Ming HUANG (2023):  Molecular modeling of thermosets
-\item Dr. Salman ZARRINI:  Molecular modeling of thermoset/glass sizing fluid
-\item Dr. Mohammadjavad MOHAMMADI:  HIV-1 Entry Inhibitor Design
-\end{itemize}
-\item {\bf Collaborators}
-\begin{itemize}
-\item \textcolor{green!80!black}{Prof. Eric VANDEN-EIJNDEN} (NYU; Mathematics)
-\item Prof. Irwin CHAIKEN (DUCOM; Biochemistry)
-\item Prof. Amos SMITH III (UPenn; Organic Chemistry)
-\end{itemize}
-\end{itemize}
-\begin{itemize}
-\item {\bf Funding (this talk):} NIH R01GM100472, NSF DMR1207389
-\item {\bf Resources:} {\tt www.github.com/cameronabrams/cfacv}, {\tt www.github.com/cameronabrams/pestifer}
-\end{itemize}
-};
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=2cm, minimum height=1.8cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=1cm, minimum height=0.5cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=green!30, aspect=2]
+\tikzstyle{myarrow} = [thick,->,>=stealth]
 
-%++(0.0,-1.25) node(text2) [anchor=north west,text width=1.1\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
-%\small \textcolor{blue}{\em Collaborators:}  {\bf Tang-Qing YU} $\bullet$ {\bf Eric VANDEN-EIJNDEN (NYU)}
-%$\bullet$ Irwin CHAIKEN (DUCOM) $\bullet$ Amos SMITH III (UPenn Chem)}
-%++(0.0,-1) node(text2) [anchor=north west,text width=\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
-%\textcolor{green!80!black}{Funding (this talk):} NIH R01GM100472, NSF DMR1207389\\   \textcolor{red}{Computing:}  XSEDE, Drexel Proteus};
+\begin{frame}[fragile]{Acknowledgments}
+\begin{tikzpicture}[scaleall=1.0,node distance=1cm]
+    \node (OTFP) [startstop, text width=4.75cm] {
+            \begin{tabular}{c}OTFP/TAMD\\{\bf Prof. S. Alexis PAZ}\end{tabular}
+            };
+    \node (Milestoning) [startstop, text width=4.75cm,right of=OTFP,fill=blue!30,xshift=4.5cm] {\begin{tabular}{c}Milestoning\\{\bf Anthony BUCCI}\end{tabular}};
+    \node (ClimbingString) [startstop, text width=4.75cm,below of=OTFP,fill=green!30,yshift=-1.4cm] {\begin{tabular}{c}Climbing Strings\\{\bf Dr. Gourav SHRIVASTAV}\end{tabular}};
+    \node (Funding) [startstop, text width=4.75cm,below of=Milestoning,fill=yellow!30,yshift=-1.4cm] {\begin{tabular}{c}Funding\\NIH R01GM100472\\NSF DMR1207389\end{tabular}};
+    \node (Resources) [startstop, text width=10.25cm,below of=ClimbingString,fill=orange!30,xshift=2.75cm,yshift=-1.5cm] {\begin{tabular}{c}Github Repositories\\{\tt cameronabrams/cfacv}\\{\tt cameronabrams/otfp}\\{\tt cameronabrams/pestifer}\end{tabular}};
+% \pcuad{\textwidth}{\textheight}
+%\showcuad
+% \path(nw) ++(-0.5,0.0) node(text1) [anchor=north west,text width=1.1\textwidth,execute at begin node=\setlength{\baselineskip}{1em}]{
+% Projects in this talk:
+% \begin{itemize}
+% \item {\bf OTFP/TAMD:}  \textcolor{red}{Prof. S. Alexis PAZ} (N. U. C\'ordoba, Argentina)
+% \item {\bf Milestoning:}  \textcolor{blue}{Anthony BUCCI} (PhD, 2016) (West Pharma)
+% \item {\bf Climbing String:} \textcolor{blue}{Dr. Gourav SHRIVASTAV}
+% \item {\bf Other current/recent projects:}
+% \begin{itemize}
+%     \item HIV-1 Envelope Spike Glycoprotein Conformational Dynamics: Salabil ABOU-HATAB
+%     \item HIV-1 Entry Inhibitor Design:
+%     \begin{itemize}
+%         \item Steven GOSSERT (PhD, 2021)
+%         \item Natasha VERGARA (PhD, 2022)
+%         \item Dr. Mohammadjavad MOHAMMADI (2023)
+%     \end{itemize}
+%     \item  Molecular modeling of thermosets
+%     \begin{itemize}
+%         \item Ming HUANG (2023)
+%         \item Dr. Salman ZARRINI (2022, Honeywell)
+%     \end{itemize}
+% \end{itemize}
+% \item {\bf Collaborators}
+% \begin{itemize}
+%     \item \textcolor{green!80!black}{Prof. S. Alexis PAZ} (N. U. C\'ordoba, Argentina)
+%     \item \textcolor{green!80!black}{Prof. Eric VANDEN-EIJNDEN} (NYU)
+%     \item Prof. Irwin CHAIKEN (Drexel Med)
+%     \item Prof. Walther MOTHES (Yale)
+%     \item Prof. Joseph SODROSKI (Dana Farber Cancer Institute)
+% \end{itemize}
+% \end{itemize}
+% \begin{itemize}
+% \item {\bf Funding (this talk):} NIH R01GM100472, NSF DMR1207389
+% \item {\bf Resources:} {\tt www.github.com/cameronabrams/cfacv}, {\tt www.github.com/cameronabrams/pestifer}
+% \end{itemize}
+% };
 \end{tikzpicture}
 \end{frame}
   
